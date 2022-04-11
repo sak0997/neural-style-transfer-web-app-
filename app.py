@@ -6,14 +6,16 @@ import imghdr
 from io import BytesIO
 import base64
 
-st.set_page_config(page_title="Digiral Art - Style Transfer",
-                   page_icon="./images/brush.png", layout="centered")
 [theme]
 primaryColor="#F63366"
 backgroundColor="#FFFFFF"
 secondaryBackgroundColor="#F0F2F6"
 textColor="#262730"
 font="sans serif"
+
+st.set_page_config(page_title="Digiral Art - Style Transfer",
+                   page_icon="./images/brush.png", layout="centered")
+
 
 title = '<p style="text-align: center color: White;font-size: 50px;font-weight: 350;font-family:Cursive "> DigitalART </p>'
 st.markdown(title, unsafe_allow_html=True)
