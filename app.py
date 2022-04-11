@@ -9,7 +9,7 @@ import base64
 st.set_page_config(page_title="Digiral Art - Style Transfer",
                    page_icon="./images/brush.png", layout="centered")
 
-title = '<p style="text-align: center;font-size: 50px;font-weight: 350;font-family:Cursive "> Digital ART </p>'
+title = '<p style="text-align: center;font-size: 50px;font-weight: 350;font-family:Cursive "> DigitalART </p>'
 st.markdown(title, unsafe_allow_html=True)
 
 
