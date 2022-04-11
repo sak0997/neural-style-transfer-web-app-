@@ -15,7 +15,7 @@ def get_image_download_link(img, file_name, style_name):
     buffered = BytesIO()
     img.save(buffered, format="JPEG")
     img_str = base64.b64encode(buffered.getvalue()).decode()
-    href = f'<a style = "color:black" href="data:file/jpg;base64,{img_str}" download="{style_name+"_"+file_name+".jpg"}"><input type="button" value="Download"></a>'
+    href = f'<a style = "color:black" href="data:file/jpg;base64,{img_str}" download="{style_name+"_"+file_name+".jpg"}"><input type="button" value="Cкачать"></a>'
     return href
 
 
@@ -80,7 +80,7 @@ if uploaded_file is not None and any(extension in uploaded_file.name for extensi
     output_image = os.path.join(
         root_output, style_name+"-"+name_file[0]+".jpg")
 
-    stylize_button = st.button("Stylize")
+    stylize_button = st.button("Стилизовать")
 
     if stylize_button:
         model = style.load_model(model_path)
