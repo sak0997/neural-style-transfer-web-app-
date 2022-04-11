@@ -6,7 +6,7 @@ import imghdr
 from io import BytesIO
 import base64
 
-backgroundColor="#0e1117"
+
 st.set_page_config(page_title="Digiral Art - Style Transfer",
                    page_icon="./images/brush.png", layout="centered")
 
