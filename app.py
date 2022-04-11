@@ -23,8 +23,6 @@ st.markdown("<h1 style='text-align: center; color: Black;'>Приложение 
             unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: right; color: Black;'>by Divy Mohan Rai</h3>",
             unsafe_allow_html=True)
-    st.sidebar.image(content, width=300, channels='BGR')
-    st.image(generated, channels='BGR', clamp=True)
 
 main_bg = "./images/pyto.png"
 main_bg_ext = "jpg"
