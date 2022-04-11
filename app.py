@@ -56,13 +56,13 @@ uploaded_file = st.file_uploader(
 
 show_file = st.empty()
 
-# checking if user has uploaded any file
+# проверка файла
 if not uploaded_file:
-    show_file.info("Please Upload an Image")
+    show_file.info("Файл не загружен")
 else:
     img = Image.open(uploaded_file)
     # check required here if file is an image file
-    st.image(img, caption='Uploaded Image.', use_column_width=True)
+    st.image(img, caption='Загруженное изображение.', use_column_width=True)
     st.image(path_style, caption='Style Image', use_column_width=True)
 
 
