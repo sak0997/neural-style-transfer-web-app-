@@ -7,7 +7,7 @@ from io import BytesIO
 import base64
 
 
-.stApp {
+.app {
   background-image: url("images/brush.png;base64,%s");
   background-size: cover;
 }
