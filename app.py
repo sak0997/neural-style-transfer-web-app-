@@ -64,8 +64,7 @@ uploaded_file = st.file_uploader(
 
 show_file = st.empty()
 st.markdown("</br>", unsafe_allow_html=True)
-st.warning('NOTE : You need atleast Intel i3 with 8GB memory for proper functioning of this application. ' +
-   ' Images greater then (2000x2000) are resized to (1000x1000).')
+st.warning('ПРИМЕЧАНИЕ. Размер изображений больше (2000x2000) изменяется до (1000x1000).')
 
 # проверка файла
 if not uploaded_file:
