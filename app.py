@@ -47,7 +47,7 @@ st.markdown(
 
 
 # создание боковой панели для выбора стиля изображения
-st.image(image=""./images/speed-brush.gif")
+st.image(image="./images/speed-brush.gif")
 st.markdown("</br>", unsafe_allow_html=True)
 style_name = st.sidebar.selectbox(
     'Выберите стиль:',
