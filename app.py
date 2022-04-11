@@ -2,13 +2,11 @@ import streamlit as st
 from PIL import Image
 import style
 import os
-from fastapi import FastAPI
-from fastapi import UploadFile
 import imghdr
 from io import BytesIO
 import base64
 
-app = FastAPI()
+
 st.set_page_config(page_title="Digiral Art - Style Transfer",
                    page_icon="./images/brush.png", layout="centered")
 
