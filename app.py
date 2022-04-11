@@ -40,16 +40,16 @@ st.markdown(
 )
 
 
-# creating a side bar for picking the style of image
+# создание боковой панели для выбора стиля изображения
 style_name = st.sidebar.selectbox(
-    'Select Style',
+    'Выберите стиль:',
     ("candy", "mosaic", "rain_princess",
      "udnie", "tg", "demon_slayer", "ben_giles", "ben_giles_2")
 )
 path_style = os.path.join(root_style, style_name+".jpg")
 
 
-# Upload image functionality
+# Функция загрузки изображения
 img = None
 uploaded_file = st.file_uploader(
     "Выберите изображение...", type=["jpg", "jpeg", "png"])
@@ -62,8 +62,8 @@ if not uploaded_file:
 else:
     img = Image.open(uploaded_file)
     # check required here if file is an image file
-    st.image(img, caption='Загруженное изображение.', use_column_width=True)
-    st.image(path_style, caption='Style Image', use_column_width=True)
+    st.image(img, caption='Загруженное изображение', use_column_width=True)
+    st.image(path_style, caption='Стиль изображения', use_column_width=True)
 
 
 extensions = [".png", ".jpeg", ".jpg"]
