@@ -6,11 +6,11 @@ import imghdr
 from io import BytesIO
 import base64
 
-# style image paths:
+# пути к изображениям стилей:
 root_style = "./images/style-images"
 
 
-# download image function
+# функция загрузки изображения
 def get_image_download_link(img, file_name, style_name):
     buffered = BytesIO()
     img.save(buffered, format="JPEG")
@@ -52,7 +52,7 @@ path_style = os.path.join(root_style, style_name+".jpg")
 # Upload image functionality
 img = None
 uploaded_file = st.file_uploader(
-    "Choose an image...", type=["jpg", "jpeg", "png"])
+    "Выберите изображение...", type=["jpg", "jpeg", "png"])
 
 show_file = st.empty()
 
