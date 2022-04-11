@@ -19,9 +19,9 @@ def get_image_download_link(img, file_name, style_name):
     return href
 
 
-st.markdown("<h1 style='text-align: center; color: Blue;'>Приложение для стилизации изображений</h1>",
+st.markdown("<h1 style='text-align: center; color: Black;'>Приложение для стилизации изображений</h1>",
             unsafe_allow_html=True)
-st.markdown("<h3 style='text-align: right; color: Blue;'>by Divy Mohan Rai</h3>",
+st.markdown("<h3 style='text-align: right; color: Black;'>by Divy Mohan Rai</h3>",
             unsafe_allow_html=True)
 
 
@@ -87,7 +87,7 @@ if uploaded_file is not None and any(extension in uploaded_file.name for extensi
         model = style.load_model(model_path)
         stylized = style.stylize(model, input_image, output_image)
         # displaying the output image
-        st.write("### Output Image")
+        st.write("### Выходное изображение")
         # image = Image.open(output_image)
         st.image(stylized, width=400, use_column_width=True)
         st.markdown(get_image_download_link(
