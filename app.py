@@ -32,7 +32,7 @@ def get_image_download_link(img, file_name, style_name):
     return href
 
 main_bg = "./images/pyto.png"
-main_bg_ext = "jpg"
+main_bg_ext = "png"
 
 st.markdown(
     f"""
