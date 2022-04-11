@@ -31,10 +31,6 @@ def get_image_download_link(img, file_name, style_name):
     href = f'<a style = "color:black" href="data:file/jpg;base64,{img_str}" download="{style_name+"_"+file_name+".jpg"}"><input type="button" value="Cкачать"></a>'
     return href
 
-
-st.markdown("<h1 style='text-align: center; color: Black;'>Приложение для стилизации изображений</h1>",
-            unsafe_allow_html=True)
-
 main_bg = "./images/pyto.png"
 main_bg_ext = "jpg"
 
