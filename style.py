@@ -22,16 +22,16 @@ import streamlit as st
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# loading a model
+# Загружаем модель
 
 
 @st.cache
 def load_model(model_path):
 
     with torch.no_grad():
-        style_model = TransformerNet()  # transformer_net.py contain the style model
+        style_model = TransformerNet()  # transformer_net.py содержит модель стиля
         state_dict = torch.load(model_path)
-        # remove saved deprecated running_* keys in InstanceNorm from the checkpoint
+        # Удалить сохраненные устаревшие ключи running_* в InstanceNorm из контрольной точки
         for k in list(state_dict.keys()):
             if re.search(r'in\d+\.running_(mean|var)$', k):
                 del state_dict[k]
@@ -40,7 +40,7 @@ def load_model(model_path):
         style_model.eval()
         return style_model
 
-# we need the content image and the the style model that we have loaded
+# Содержимое изображение и модель стиля, которую мы загрузили
 # with load_model function
 
 
@@ -57,13 +57,13 @@ def stylize(style_model, content_image, output_image):
     ])
     content_image = content_transform(content_image)
 
-    # to treat a single image like a batch
+    # Для обработки одного изображения как пакета
     content_image = content_image.unsqueeze(0).to(device)
 
     with torch.no_grad():
         output = style_model(content_image).cpu()
 
-    # output image here is the path to the output image
+    # Выходное изображение здесь путь к выходному изображению
     img = utils.save_image(output_image, output[0])
     return img
 
