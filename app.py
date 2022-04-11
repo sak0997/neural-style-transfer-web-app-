@@ -86,6 +86,6 @@ if uploaded_file is not None and any(extension in uploaded_file.name for extensi
         # displaying the output image
         st.write("### Выходное изображение")
         # image = Image.open(output_image)
-        st.image(stylized, width=400, use_column_width=True)
+        st.image(stylized, width=10000, use_column_width=True)
         st.markdown(get_image_download_link(
             stylized, name_file[0], style_name), unsafe_allow_html=True)
