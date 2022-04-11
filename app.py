@@ -44,11 +44,7 @@ style_name = st.sidebar.selectbox(
      "udnie", "tg", "demon_slayer", "ben_giles", "ben_giles_2")
 )
 path_style = os.path.join(root_style, style_name+".jpg")
-image_size = st.sidebar.selectbox(
-        label = "Choose output image size:",
-        options = ("None", "128x128", "256x256", "512x512", "1024x1024"),
-        index = 0
-    )
+
 
 # Функция загрузки изображения
 img = None
