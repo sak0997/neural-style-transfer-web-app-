@@ -2,7 +2,6 @@ import streamlit as st
 from PIL import Image
 import style
 import os
-from fastapi import File
 from fastapi import FastAPI
 from fastapi import UploadFile
 import imghdr
