@@ -6,7 +6,7 @@ import imghdr
 from io import BytesIO
 import base64
 
-<style>
+
 .stApp {
   background-image: url("images/brush.png;base64,%s");
   background-size: cover;
