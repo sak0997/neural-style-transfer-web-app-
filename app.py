@@ -11,7 +11,7 @@ import base64
   background-image: url("images/brush.png;base64,%s");
   background-size: cover;
 }
-</style>
+
 st.set_page_config(page_title="Digiral Art - Style Transfer",
                    page_icon="./images/brush.png", layout="centered")
 
