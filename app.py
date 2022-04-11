@@ -63,13 +63,14 @@ uploaded_file = st.file_uploader(
     "Выберите изображение...", type=["jpg", "jpeg", "png"])
 
 show_file = st.empty()
+st.markdown("</br>", unsafe_allow_html=True)
+st.warning('NOTE : You need atleast Intel i3 with 8GB memory for proper functioning of this application. ' +
+   ' Images greater then (2000x2000) are resized to (1000x1000).')
 
 # проверка файла
 if not uploaded_file:
     show_file.info("Файл не загружен")
-    st.markdown("</br>", unsafe_allow_html=True)
-st.warning('NOTE : You need atleast Intel i3 with 8GB memory for proper functioning of this application. ' +
-   ' Images greater then (2000x2000) are resized to (1000x1000).')
+
 
 else:
     img = Image.open(uploaded_file)
