@@ -6,6 +6,8 @@ import imghdr
 from io import BytesIO
 import base64
 
+st.set_page_config(page_title="PixelMix - Style Transfer",
+                   page_icon="./assets/favicon.png", layout="centered")
 # пути к изображениям стилей:
 root_style = "./images/style-images"
 
