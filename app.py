@@ -6,8 +6,17 @@ import imghdr
 from io import BytesIO
 import base64
 
-st.set_page_config(page_title="PixelMix - Style Transfer",
+st.set_page_config(page_title="Digiral Art - Style Transfer",
                    page_icon="./images/brush.png", layout="centered")
+
+title = '<p style="text-align: center;font-size: 50px;font-weight: 350;font-family:Cursive "> Digital ART </p>'
+st.markdown(title, unsafe_allow_html=True)
+
+
+st.markdown(
+    "<b> <i> Создавайте цифровое искусство с помощью нейронной сети!", unsafe_allow_html=True
+)
+
 # пути к изображениям стилей:
 root_style = "./images/style-images"
 
