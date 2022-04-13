@@ -60,7 +60,6 @@ path_style = os.path.join(root_style, style_name+".jpg")
 # Функция загрузки изображения
 img = None
 uploaded_file = st.file_uploader(
-  st.image(style_image, width=250)
     "Выберите изображение...", type=["jpg", "jpeg", "png"])
 
 show_file = st.empty()
