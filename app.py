@@ -61,7 +61,7 @@ path_style = os.path.join(root_style, style_name+".jpg")
 img = None
 uploaded_file = st.file_uploader(
     "Выберите изображение...", type=["jpg", "jpeg", "png"])
-actual_width, actual_height = image.size
+output_compression_size
 show_file = st.empty()
 st.markdown("</br>", unsafe_allow_html=True)
 st.warning('ПРИМЕЧАНИЕ. Размер изображений больше (2000x2000) изменяется до (1000x1000).')
