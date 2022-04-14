@@ -74,6 +74,7 @@ else:
     img = Image.open(uploaded_file)
     # check required here if file is an image file
     st.image(img, caption='Загруженное изображение', use_column_width=True)
+    st.image(image, width=400)
     st.image(path_style, caption='Стиль изображения', use_column_width=True)
 
 
