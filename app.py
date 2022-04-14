@@ -27,6 +27,10 @@ root_style = "./images/style-images"
 def get_image_download_link(img, file_name, style_name):
     buffered = BytesIO()
     img.save(buffered, format="JPEG")
+    if uploaded_file is not None:
+     # To read file as bytes:
+     bytes_data = uploaded_file.getvalue()
+     st.write(bytes_data)
     img_str = base64.b64encode(buffered.getvalue()).decode()
     href = f'<a style = "color:black" href="data:file/jpg;base64,{img_str}" download="{style_name+"_"+file_name+".jpg"}"><input type="button" value="Cкачать"></a>'
     return href
