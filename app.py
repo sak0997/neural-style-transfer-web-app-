@@ -73,7 +73,7 @@ if not uploaded_file:
 else:
     img = Image.open(uploaded_file)
     # check required here if file is an image file
-    st.image(img, width=400, caption='Загруженное изображение', width=400,  use_column_width=True)
+    st.image(img, width=400, caption='Загруженное изображение',  use_column_width=True)
     st.image(path_style, caption='Стиль изображения', use_column_width=True)
 
 
